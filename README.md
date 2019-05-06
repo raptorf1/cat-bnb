@@ -9,11 +9,11 @@ During our studies in Craft Academy, we decided to make a small basic applicatio
 
 Inspired by AirBNB, we set out on May 2019 to create something similar, where interested cat hosts can post their details, for cat owners to find them.
 
-This was a one week project.
+This was a one week project (May 6th - 12th).
 
 # Deployment
 
-We have deployed this application using Heroku. You can navigate through it [here]().
+We have deployed this application using Heroku. You can navigate through it......(to be announced).
 
 # Tests, test coverage & CI
 
