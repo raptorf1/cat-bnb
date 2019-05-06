@@ -33,7 +33,7 @@ Feature tests are located in the `features` folder and unit tests in the `spec/m
 
 # Built With
 
-* [Ruby on Rails](https://rubyonrails.org/) version 5.2.3
+* [Ruby on Rails](https://rubyonrails.org/) version 5.2.0
 * [Ruby](https://www.ruby-lang.org/en/) version 2.4.1
 
 # Authors
