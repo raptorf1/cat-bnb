@@ -13,8 +13,7 @@ This was a one week project (May 6th - 12th).
 
 # User Stories
 
-```
-```
+Check the whole design sprint and user story history of the project in [this](https://www.pivotaltracker.com/n/projects/2344914) Pivotal Tracker board.
 
 # Deployment
 
@@ -26,7 +25,7 @@ This application was feature tested using [Cucumber](https://cucumber.io/) and u
 
 To be able to run the tests, run `bundle install` in your terminal as soon as you fork this repository.
 
-You must also have the database migrations in place, in order for everything to work properly. So in your terminal run `rails db:migrate`. In case this command produces an error, you can run `rails db:drop`, `rails db:create` and then `rails db:migrate`.
+You must also have the database migrations in place, in order for everything to work properly. So in your terminal run `rails db:migrate`. In case this command produces an error, you can run `rails db:drop` and then `rails db:create db:migrate`.
 
 After that, use `bundle exec cucumber` or `bundle exec rspec` to avoid any conflicts with the gems of this repo and your local gems.
 
