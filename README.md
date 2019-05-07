@@ -11,15 +11,22 @@ Inspired by AirBNB, we set out on May 2019 to create something similar, where in
 
 This was a one week project (May 6th - 12th).
 
+# User Stories
+
+```
+```
+
 # Deployment
 
 We have deployed this application using Heroku. You can navigate through it......(to be announced).
 
-# Tests, test coverage & CI
+# Tests, Test Coverage & CI
 
 This application was feature tested using [Cucumber](https://cucumber.io/) and unit tested using [Rspec](https://rspec.info/).
 
 To be able to run the tests, run `bundle install` in your terminal as soon as you fork this repository.
+
+You must also have the database migrations in place, in order for everything to work properly. So in your terminal run `rails db:migrate`. In case this command produces an error, you can run `rails db:drop`, `rails db:create` and then `rails db:migrate`.
 
 After that, use `bundle exec cucumber` or `bundle exec rspec` to avoid any conflicts with the gems of this repo and your local gems.
 
