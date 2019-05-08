@@ -8,10 +8,10 @@ Feature: User can create a Profile
       | email         | password   |
       | boa@snake.se  | pswrd12345 |
     And I am logged in as "boa@snake.se"
-    And i visit the landing page
+    And I visit the landing page
 
   Scenario: User successfully creates a Profile
-    When I click on "Become a host" link
+    When I click "Become a host" link
     Then I should be on "Create profile" page
     When I fill "Name" with "Boa"
     And I fill "Location" with "Gothenburg"
