@@ -1,2 +1,10 @@
 = render "./partials/navbar"
-%div{:href => "#", :class => "bg-grey h-screen"}
+%h1 Listings#index
+- @listings.each do |listing|
+  .listing{id: dom_id(listing)}
+    %p= listing.name
+    %p= listing.location
+    %p= listing.description
+    %p= listing.email
+    %p= listing.phone_number
+    %p= listing.availability
