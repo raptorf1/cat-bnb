@@ -1,5 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe Profile, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe 'DB table' do
+    it { is_expected.to have_db_column :name }
+    it { is_expected.to have_db_column :location }
+    it { is_expected.to have_db_column :description }
+    it { is_expected.to have_db_column :picture }
+    it { is_expected.to have_db_column :price }
+  end
 end
