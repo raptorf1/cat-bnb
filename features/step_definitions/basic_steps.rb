@@ -6,7 +6,7 @@ When("I click {string} link") do |link|
   click_link link
 end
 
-Given("I visit the Become a host page") do
+Given("I visit the New listings page") do
   visit new_listing_path
 end
 

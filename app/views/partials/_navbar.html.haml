@@ -1,16 +1,6 @@
-%nav.flex.bg-white.p-3
-  %div{:class => "w-2/5 p-3"}
-    %h1{:class => "text-4xl font-bold inline-flex"} CAT
-    %span{:class => "text-4xl font-thin"} BNB
-    %h2{:class => "text-sm font-light"} Loving care when you’re not there
-  %div{:class => "nav_bar w-3/5 pr-3 text-md no-underline text-right"}
-    %div{:class => "mt-1"}
-      %p{:href => "#", :class => "no-underline tracking-wide text-sm text-black text-red pb-2"} Welcome Admin
-    %div{:class => "mt-1"}
-      %a{:href => "#", :class => "no-underline tracking-wide text-black pl-4 pr-4"} BECOME A HOST
-      |
-      %a{:href => "#", :class => "no-underline tracking-wide text-black pl-4"} NEW LISTING
-      |
-      %a{:href => "#", :class => "no-underline tracking-wide text-black pl-4 pr-4"} SIGN UP
-      |
-      %a{:href => "#", :class => "no-underline tracking-wide text-black pl-4"} LOG IN
+%p Welcome
+= link_to "Become a host", "#"
+= link_to "New listing", new_listing_path
+= link_to "Sign up", "#"
+= link_to "Log in", "#"
+= link_to "Log out", "#"
