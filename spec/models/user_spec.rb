@@ -8,7 +8,7 @@ RSpec.describe User, type: :model do
 
   describe 'Factory' do
     it 'should have a valid Factory' do
-      expect(FactoryBot.to_create(:user)).to be_valid
+      expect(FactoryBot.create(:user)).to be_valid
     end
   end
 
