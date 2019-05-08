@@ -3,28 +3,28 @@
 
 = form_with model: @listing, local: true do |form|
   %p
-    = form.label :name
+    = form.label :pet_name
     %br/
-    = form.text_field :name
+    = form.text_field :pet_name
   %p
-    = form.label :location
+    = form.label :pet_location
     %br/
-    = form.text_field :location
+    = form.text_field :pet_location
   %p
-    = form.label :description
+    = form.label :pet_description
     %br/
-    = form.text_area :description  
+    = form.text_area :pet_description  
   %p
-    = form.label :availability
+    = form.label :start_date
     %br/
-    = form.text_field :availability
+    = form.date_field :start_date
   %p
-    = form.label :email
+    = form.label :end_date
     %br/
-    = form.email_field :email
+    = form.date_field :end_date
   %p
-    = form.label :phone_number
+    = form.label :pet_picture
     %br/
-    = form.telephone_field :phone_number
+    = form.text_field :pet_picture
   %p
     = form.submit "Create Listing"

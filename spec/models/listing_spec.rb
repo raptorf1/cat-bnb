@@ -3,12 +3,12 @@ require 'rails_helper'
 RSpec.describe Listing, type: :model do
   describe 'DB table' do
     it { is_expected.to have_db_column :id }
-    it { is_expected.to have_db_column :name }
-    it { is_expected.to have_db_column :location }
-    it { is_expected.to have_db_column :description }
-    it { is_expected.to have_db_column :email }
-    it { is_expected.to have_db_column :phone_number }
-    it { is_expected.to have_db_column :availability }
+    it { is_expected.to have_db_column :pet_name }
+    it { is_expected.to have_db_column :pet_location }
+    it { is_expected.to have_db_column :pet_description }
+    it { is_expected.to have_db_column :start_date }
+    it { is_expected.to have_db_column :end_date }
+    it { is_expected.to have_db_column :pet_picture }
   end
 
   describe 'Factory' do
