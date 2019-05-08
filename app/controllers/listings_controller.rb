@@ -8,12 +8,12 @@ class ListingsController < ApplicationController
   end
 
   def create
-    @listing = Listing.new(listing_params)
+    listing = Listing.create(listing_params)
 
-    if @listing.save
+    if listing.persisted?
       redirect_to root_path
     else
-      render 'new'
+      redirect_to new_listing_path, notice: "Please fill in all fields"
   end
 end
 

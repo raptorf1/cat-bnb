@@ -21,12 +21,7 @@ Feature: Visitor can create listing
     And I should see "1-10 may" within "Leif" section
     And I should see "leif@craft.se" within "Leif" section
     And I should see "0712345678" within "Leif" section
-
+  
   Scenario: Visitor can not create a listing when not all fields are filled in
-    When I fill in "Name" with "Leif"
-    And I fill in "Availability" with "1-10 may"
-    And I fill in "Email" with "leif@craft.se"
-    And I fill in "Phone" with "0712345678"
-    And I click "Create Listing" button
-    Then I should see "Location can't be blank"
-    And I should see "Description can't be blank"
+    When I click "Create Listing" button
+    Then I should see "Please fill in all fields"
