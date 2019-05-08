@@ -15,5 +15,5 @@ Then("I should see {string} button") do |button|
 end
 
 Then("I should be on landing page") do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(current_path).to eq root_path
 end

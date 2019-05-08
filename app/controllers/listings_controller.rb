@@ -9,7 +9,9 @@ class ListingsController < ApplicationController
 
   def create
     @listing = Listing.new
+
     @listing.save
+    redirect_to root_path
   end
 
 end
