@@ -27,7 +27,7 @@ This application was feature tested using [Cucumber](https://cucumber.io/) and u
 
 To be able to run the tests, run `bundle install` in your terminal as soon as you fork this repository.
 
-You must also have the database migrations in place, in order for everything to work properly. So in your terminal run `rails db:migrate`. In case this command produces an error, you can run `rails db:drop` and then `rails db:create db:migrate`.
+You must also have the database migrations in place, in order for everything to work properly. So in your terminal run `rails db:migrate`. In case this command produces an error, you can run `rails db:drop db:setup`.
 
 After that, use `bundle exec cucumber` or `bundle exec rspec` to avoid any conflicts with the gems of this repo and your local gems.
 
