@@ -11,6 +11,15 @@ RSpec.describe Listing, type: :model do
     it { is_expected.to have_db_column :availability }
   end
 
+  describe 'Validations' do
+    it { is_expected.to validate_presence_of :name }
+    it { is_expected.to validate_presence_of :location }
+    it { is_expected.to validate_presence_of :description }
+    it { is_expected.to validate_presence_of :email }
+    it { is_expected.to validate_presence_of :phone_number }
+    it { is_expected.to validate_presence_of :availability }
+  end
+
   describe 'Factory' do
     it 'should have a valid Factory' do
       expect(FactoryBot.create(:listing)).to be_valid
