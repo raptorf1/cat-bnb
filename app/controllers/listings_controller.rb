@@ -19,7 +19,7 @@ end
 
   private
     def listing_params
-      params.require(:listing).permit(:name, :location, :description, :availability, :email, :phone_number)
+      params.require(:listing).permit(:pet_name, :pet_location, :pet_description, :start_date, :end_date, :pet_picture)
     end
     
 end
