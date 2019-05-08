@@ -6,15 +6,15 @@ Feature: Visitor can view listing
 
   Background:
     Given the following listings exist
-    | name  | location    | description   | email         | phone_number | availability |
-    | Zane  | Gothenburg  | I'm nice      | zane@cat.com  | 0701234567   | 1-10 may     |
-    | Carla | Stockholm   | I love cats!  | carla@cool.se | 0709876543   | 25-30 may    |
+    | pet_name  | pet_location    | pet_description   | start_date      | end_date      | pet_picture |
+    | Zane      | Gothenburg      | I'm nice          | 2019-06-28      | 2019-06-29    | picture1    |
+    | Carla     | Stockholm       | I love cats!      | 2019-05-28      | 2019-06-01    | picture2    |
 
   Scenario:
     When I visit the landing page
     Then I should see "Zane"
     And I should see "Gothenburg" within "Zane" section
     And I should see "I'm nice" within "Zane" section
-    And I should see "zane@cat.com" within "Zane" section
-    And I should see "0701234567" within "Zane" section
-    And I should see "1-10 may" within "Zane" section
+    And I should see "2019-06-28" within "Zane" section
+    And I should see "2019-06-29" within "Zane" section
+    And I should see "picture1" within "Zane" section
