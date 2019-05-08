@@ -1,30 +1,3 @@
 %h1 Create new listing
 
-
-= form_with model: @listing, local: true do |form|
-  %p
-    = form.label :pet_name
-    %br/
-    = form.text_field :pet_name
-  %p
-    = form.label :pet_location
-    %br/
-    = form.text_field :pet_location
-  %p
-    = form.label :pet_description
-    %br/
-    = form.text_area :pet_description  
-  %p
-    = form.label :start_date
-    %br/
-    = form.date_field :start_date
-  %p
-    = form.label :end_date
-    %br/
-    = form.date_field :end_date
-  %p
-    = form.label :pet_picture
-    %br/
-    = form.text_field :pet_picture
-  %p
-    = form.submit "Create Listing"
+= render "./partials/form.html.haml"

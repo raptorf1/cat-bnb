@@ -2,7 +2,11 @@ When("I visit the landing page") do
   visit root_path
 end
 
-Given("I visit the Become a host page") do
+When("I click {string} link") do |link|
+  click_link link
+end
+
+Given("I visit the New listings page") do
   visit new_listing_path
 end
 
