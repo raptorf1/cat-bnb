@@ -1,9 +1,9 @@
 %h1 Listings#index
 - @listings.each do |listing|
   .listing{id: dom_id(listing)}
-    %p= listing.name
-    %p= listing.location
-    %p= listing.description
-    %p= listing.email
-    %p= listing.phone_number
-    %p= listing.availability
+    %p= listing.pet_name
+    %p= listing.pet_location
+    %p= listing.pet_description
+    %p= listing.start_date
+    %p= listing.end_date
+    %p= listing.pet_picture
