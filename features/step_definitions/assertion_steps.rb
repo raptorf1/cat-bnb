@@ -13,3 +13,7 @@ end
 Then("I should see {string} button") do |button|
   expect(page).to have_button(button)
 end
+
+Then("I should be on landing page") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
