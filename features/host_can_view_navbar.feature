@@ -5,8 +5,8 @@ Feature: Host can view navbar and see "Become a Host" link
 
   @javascript
   Scenario: Visitor can see the landing page
-    When I visit the landing page
-    And I should see "Welcome"
+    Given I visit the landing page
+    Then I should see "Welcome"
     And I should see "Become a host" link 
     And I should see "New listing" link
     And I should see "Sign up" link
