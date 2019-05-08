@@ -9,3 +9,8 @@ end
 When("I fill in {string} with {string}") do |field, content|
   fill_in field, with: content
 end
+
+Given("I am logged in as {string}") do |email|
+  user = User.find_by(email: email)
+  login_as(user, scope: :user) 
+end
