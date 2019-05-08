@@ -9,10 +9,13 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
   %body
+    = render "./partials/navbar"
+    
     = if notice
       %p.alert.alert-success= notice
     = if alert
       %p.alert.alert-danger= alert
       
+    
     = yield
     
