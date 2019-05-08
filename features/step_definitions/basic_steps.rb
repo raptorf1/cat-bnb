@@ -13,3 +13,7 @@ end
 When("I click {string} button") do |button|
   click_on button
 end
+
+Then "stop" do
+  binding.pry
+end
