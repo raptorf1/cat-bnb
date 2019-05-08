@@ -1,4 +1,3 @@
-@javascript
 Feature: Visitor can view listing
   As a Visitor
   In order to find a suitable host for my cat

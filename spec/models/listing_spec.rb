@@ -11,6 +11,15 @@ RSpec.describe Listing, type: :model do
     it { is_expected.to have_db_column :pet_picture }
   end
 
+  describe 'Validations' do
+    it { is_expected.to validate_presence_of :pet_name }
+    it { is_expected.to validate_presence_of :pet_location }
+    it { is_expected.to validate_presence_of :pet_description }
+    it { is_expected.to validate_presence_of :start_date }
+    it { is_expected.to validate_presence_of :end_date }
+    it { is_expected.to validate_presence_of :pet_picture }
+  end
+
   describe 'Factory' do
     it 'should have a valid Factory' do
       expect(FactoryBot.create(:listing)).to be_valid

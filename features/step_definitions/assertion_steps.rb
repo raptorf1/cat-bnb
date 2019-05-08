@@ -17,3 +17,7 @@ end
 Then("I should see {string} button") do |button|
   expect(page).to have_button(button)
 end
+
+Then("I should be on landing page") do
+  expect(current_path).to eq root_path
+end
