@@ -19,3 +19,10 @@ Given("I am logged in as {string}") do |email|
   login_as(user, scope: :user) 
 end
 
+Then("I should be on Create profile page") do
+  visit new_profile_path 
+end
+
+
+
+

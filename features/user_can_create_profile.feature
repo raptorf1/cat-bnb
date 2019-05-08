@@ -12,7 +12,7 @@ Feature: User can create a Profile
 
   Scenario: User successfully creates a Profile
     When I click "Become a host" link
-    Then I should be on "Create profile" page
+    Then I should be on Create profile page
     When I fill "Name" with "Boa"
     And I fill "Location" with "Gothenburg"
     And I fill "Price" with "299"

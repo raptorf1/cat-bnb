@@ -17,3 +17,4 @@ end
 Then("I should see {string} button") do |button|
   expect(page).to have_button(button)
 end
+
