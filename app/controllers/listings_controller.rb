@@ -13,7 +13,7 @@ class ListingsController < ApplicationController
     if listing.save
       redirect_to root_path
     else
-      render 'new'
+      render 'new', notice: 'Please fill in all fields'
   end
 end
 
