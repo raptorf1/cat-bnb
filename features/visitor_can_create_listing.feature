@@ -12,7 +12,7 @@ Feature: Visitor can create listing
     And I fill in "Availability" with "1-10 may"
     And I fill in "Email" with "leif@craft.se"
     And I fill in "Phone" with "0712345678"
-  
+
   Scenario:
     When I click "Create Listing" button
     Then I should be on landing page
