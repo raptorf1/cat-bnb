@@ -22,10 +22,6 @@ Then "stop" do
   binding.pry
 end
 
-When("I click {string} within {string}") do |string, string2|
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-Then("I should be on the {string} listing page") do |string|
+When("I click {string} within {string} offer") do |string, string2|
   pending # Write code here that turns the phrase above into concrete actions
 end
