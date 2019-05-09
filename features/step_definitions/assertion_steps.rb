@@ -23,7 +23,7 @@ Then("I should be on landing page") do
 end
 
 Then("I should be on offer page") do
-  expect(current_path).to eq new_offer_path
+  expect(current_path).to eq new_listing_offer_path
 end
 
 Then("I should be on show listing page") do
