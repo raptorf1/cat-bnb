@@ -1,2 +1,8 @@
-%h1 Listings#show 
+%h1 Listings#show    
+- @listing.offers.each do |offer|
+  .offer{id: dom_id(offer)}
+    %p= offer.name
+    %p= offer.email
+    %p= offer.location
+    %p #{offer.price} kr 
     
