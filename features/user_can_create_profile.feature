@@ -6,8 +6,8 @@ Feature: User can create a Host Profile
 
   Background:
     Given the following user exist
-      | email         | password   |
-      | boa@snake.se  | pswrd12345 |
+      | email        | password   |
+      | boa@snake.se | pswrd12345 |
 
   Scenario: Registered user tries to create a Host Profile while not logged in (relatively happy path)
     Given I visit the landing page
@@ -18,9 +18,9 @@ Feature: User can create a Host Profile
     And I click "Log in" button
     Then I should see "Signed in successfully."
     When I click "Become a host" link
-    Then I should be on Create profile page  
+    Then I should be on Create profile page
 
-  Scenario: User successfully creates a Host Profile (happy path) 
+  Scenario: User successfully creates a Host Profile (happy path)
     Given I am logged in as "boa@snake.se"
     And I visit the landing page
     When I click "Become a host" link
@@ -43,3 +43,12 @@ Feature: User can create a Host Profile
     And I fill in "Picture" with "https://www.linkedin.com"
     And I click on "Create Profile"
     Then I should see "Please fill in all fields"
+
+  Scenario: Registered user can only create 1 profile
+    Given the following profile exist
+      | name   | location | descriptio | picture                        |
+      | George | Greece   | Sunny      | https://www.pivotaltracker.com |
+    When I visit the landing page
+    And I click "Become a host" link
+    Then I should see "You already have a host profile"
+    
