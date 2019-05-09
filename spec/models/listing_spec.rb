@@ -19,6 +19,9 @@ RSpec.describe Listing, type: :model do
     it { is_expected.to validate_presence_of :end_date }
     it { is_expected.to validate_presence_of :pet_picture }
   end
+  describe 'Asssociations' do
+    it { should have_many(:offers)}
+  end
 
   describe 'Factory' do
     it 'should have a valid Factory' do
