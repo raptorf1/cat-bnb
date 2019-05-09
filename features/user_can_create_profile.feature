@@ -10,7 +10,7 @@ Feature: User can create a Host Profile
 
   Scenario: Registered user tries to create a Host Profile while not logged in
     Given I visit the landing page
-    And I click on "Become a host"
+    And I click "Become a host" link
     Then I should be on the Log in page
     And I fill "Email" with "boa@snake.se"
     And I fill "Password" with "pswrd12345"
@@ -21,10 +21,10 @@ Feature: User can create a Host Profile
     And I visit the landing page
     When I click "Become a host" link
     Then I should be on Create profile page
-    When I fill "Name" with "Boa"
-    And I fill "Location" with "Gothenburg"
-    And I fill "About" with "I am a nice dude, I love cats"
-    And I fill "Picture" with "https://www.linkedin.com"
-    And I click on "Create profile"
+    When I fill in "Name" with "Boa"
+    And I fill in "Location" with "Gothenburg"
+    And I fill in "Description" with "I am a nice dude, I love cats"
+    And I fill in "Picture" with "https://www.linkedin.com"
+    And I click "Create profile" button
     Then I should be on landing page
     And I should see "You have successfully created a host profile. Now you can apply to host cats."
