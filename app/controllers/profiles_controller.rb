@@ -5,7 +5,9 @@ class ProfilesController < ApplicationController
   end
 
   def create
+    user = current_user
     profile = Profile.create(profile_params)
+    user.profile = profile
 
     if profile.persisted?
       redirect_to root_path, notice: "You have successfully created a host profile. Now you can apply to host cats."

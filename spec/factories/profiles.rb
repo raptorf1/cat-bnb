@@ -4,5 +4,6 @@ FactoryBot.define do
     location { "Greece" }
     description { "Sunny" }
     picture { "Picture" }
+    association :user
   end
 end
