@@ -16,9 +16,11 @@ Feature: Host can make an offer on a listing
     And I should see "2019-06-28" within "Zane" section
     And I should see "2019-06-29" within "Zane" section
     And I should see "picture1" within "Zane" section
-
+  
+  @javascript
   Scenario:
     When I click on "Make an offer" within "Zane" section
+    Then I should be on offer page
     Then I should see "Create your offer"
     And I fill in "Name" with "Steffe"
     And I fill in "Email" with "steffe@gmail.com"
