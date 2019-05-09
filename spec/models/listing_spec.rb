@@ -18,7 +18,8 @@ RSpec.describe Listing, type: :model do
     it { is_expected.to validate_presence_of :start_date }
     it { is_expected.to validate_presence_of :end_date }
     it { is_expected.to validate_presence_of :pet_picture }
-  end 
+  end
+  
   describe 'Asssociations' do
     it { should have_many(:offers)}
   end
