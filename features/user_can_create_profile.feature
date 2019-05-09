@@ -9,7 +9,7 @@ Feature: User can create a Host Profile
       | email         | password   |
       | boa@snake.se  | pswrd12345 |
 
-  Scenario: Registered user tries to create a Host Profile while not logged in
+  Scenario: Registered user tries to create a Host Profile while not logged in (relatively happy path)
     Given I visit the landing page
     And I click "Become a host" link
     Then I should be on the Log in page
@@ -32,3 +32,14 @@ Feature: User can create a Host Profile
     And I click on "Create Profile"
     Then I should be on landing page
     And I should see "You have successfully created a host profile. Now you can apply to host cats."
+
+  Scenario: User fails to create a Host Profile because of not filled in fields in the form (sad path)
+    Given I am logged in as "boa@snake.se"
+    And I visit the landing page
+    When I click "Become a host" link
+    Then I should be on Create profile page
+    When I fill in "Name" with "Boa"
+    And I fill in "Location" with "Gothenburg"
+    And I fill in "Picture" with "https://www.linkedin.com"
+    And I click on "Create Profile"
+    Then I should see "Please fill in all fields"
