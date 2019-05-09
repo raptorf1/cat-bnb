@@ -20,7 +20,7 @@ Check the whole design sprint and user story history of the project in [this](ht
 
 # Deployment
 
-We have deployed this application using Heroku. You can navigate through it......(to be announced).
+We have deployed this application using Heroku. You can navigate through it on [this](https://kattbnb.herokuapp.com/) link.
 
 # Tests, Test Coverage & CI
 
