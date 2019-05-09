@@ -21,3 +21,8 @@ end
 Then("I should be on landing page") do
   expect(current_path).to eq root_path
 end
+
+Then("I should be on show listing page") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
