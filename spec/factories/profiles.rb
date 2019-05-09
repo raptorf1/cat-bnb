@@ -1,5 +1,8 @@
 FactoryBot.define do
   factory :profile do
-    create { "MyString" }
+    name { "George" }
+    location { "Greece" }
+    description { "Sunny" }
+    picture { "Picture" }
   end
 end
