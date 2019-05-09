@@ -1,3 +1,4 @@
+@javascript
 Feature: User can create a Host Profile
   As a registered user
   In order to be able to apply for becoming a cat host
@@ -25,6 +26,6 @@ Feature: User can create a Host Profile
     And I fill in "Location" with "Gothenburg"
     And I fill in "Description" with "I am a nice dude, I love cats"
     And I fill in "Picture" with "https://www.linkedin.com"
-    And I click "Create profile" button
+    And I click on "Create Profile"
     Then I should be on landing page
     And I should see "You have successfully created a host profile. Now you can apply to host cats."
