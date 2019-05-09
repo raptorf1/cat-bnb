@@ -21,3 +21,7 @@ end
 Then("I should be on landing page") do
   expect(current_path).to eq root_path
 end
+
+Then("I should be on Create profile page") do
+  expect(current_path).to eq new_profile_path 
+end
