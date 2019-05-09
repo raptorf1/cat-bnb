@@ -20,4 +20,9 @@ RSpec.describe Profile, type: :model do
       expect(FactoryBot.create(:profile)).to be_valid
     end
   end
+
+  describe 'Association' do
+    it { should belong_to(:user) }
+  end
+
 end

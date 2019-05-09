@@ -12,4 +12,8 @@ RSpec.describe User, type: :model do
     end
   end
 
+  describe 'Association' do
+    it { should have_one(:profile) }
+  end
+
 end
