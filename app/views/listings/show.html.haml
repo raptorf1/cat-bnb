@@ -1,4 +1,6 @@
 %h1= @listing.pet_name
+%p Dates: #{@listing.start_date} - #{@listing.end_date}
+
 - @listing.offers.each do |offer|
   .offer{id: dom_id(offer)}
     %p= offer.name

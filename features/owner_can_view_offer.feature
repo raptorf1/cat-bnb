@@ -17,6 +17,8 @@ Feature: Owner can view offers on Listing page
   Scenario: Owner can click on listing and see correct offers in that listing
     When I click "Show listing" within "Leif" section
     Then I should be on the "Leif" listing page
+    And I should see "Leif" 
+    And I should see "Dates: 2019-06-28 to 2019-06-29" 
     And I should see "Felix"
     And I should see "felix@craft.se"
     And I should see "Gothenburg"
