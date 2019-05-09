@@ -4,11 +4,13 @@ class OffersController < ApplicationController
   end
 
   def new
-    @offer = Offer.new(params[:listing_id])
+    @offer = Offer.new(offer_params)
   end
 
   private
   def offer_params
-    params.require(:offer).permit(:listing_id)
+    params.require(:offer).permit(:name, :email, :location, :price)
   end
 end
+
+
