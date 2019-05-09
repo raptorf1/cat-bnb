@@ -15,7 +15,7 @@ When("I fill in {string} with {string}") do |field, content|
 end
 
 When("I click {string} button") do |button|
-  click_on button
+  click_button button
 end
 
 Then "stop" do

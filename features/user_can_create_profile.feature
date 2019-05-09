@@ -15,6 +15,9 @@ Feature: User can create a Host Profile
     Then I should be on the Log in page
     And I fill in "Email" with "boa@snake.se"
     And I fill in "Password" with "pswrd12345"
+    And I click "Log in" button
+    Then I should see "Signed in successfully."
+    When I click "Become a host" link
     Then I should be on Create profile page  
 
   Scenario: User successfully creates a Host Profile (happy path) 
