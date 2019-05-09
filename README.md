@@ -1,4 +1,5 @@
 [![Coverage Status](https://coveralls.io/repos/github/CraftAcademy/cat-bnb/badge.svg?branch=development)](https://coveralls.io/github/CraftAcademy/cat-bnb?branch=development)
+[![Build Status](https://semaphoreci.com/api/v1/craftacademy/cat-bnb/branches/development/badge.svg)](https://semaphoreci.com/craftacademy/cat-bnb)
 
 # Project Title
 
