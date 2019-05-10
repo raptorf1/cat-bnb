@@ -12,11 +12,10 @@ Feature: Host can make an offer on a listing
     When I visit the landing page
 
   Scenario: Host can successfully create an offer
-    Then I should see "Zane"
     When I click "Make an offer" within "Zane" section
     Then I should be on the "Zane" listing page
-    Then I should see "Create your offer"
-    And I fill in "Name" with "Steffe"
+    And I should see "Create your offer"
+    When I fill in "Name" with "Steffe"
     And I fill in "Email" with "steffe@gmail.com"
     And I fill in "Location" with "Gothenburg"
     And I fill in "Price" with "100kr"
@@ -26,7 +25,7 @@ Feature: Host can make an offer on a listing
   Scenario: Host can not create an offer when not all the fields are filled in.
     When I click "Make an offer" within "Zane" section
     Then I should be on the "Zane" listing page
-    Then I should see "Create your offer"
+    And I should see "Create your offer"
     And I fill in "Name" with "Steffe"
     And I fill in "Location" with "Gothenburg"
     And I fill in "Price" with "100kr"

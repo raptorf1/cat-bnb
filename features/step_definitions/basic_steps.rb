@@ -19,10 +19,10 @@ When("I click {string} button") do |button|
 end
 
 When("I click on {string} within {string} section") do |content, section|
-name = Listing.find_by(pet_name: section)
-dom_section = "#listing_#{name.id}"
-within(dom_section) do
-  expect(page).to have_content content
+  name = Listing.find_by(pet_name: section)
+  dom_section = "#listing_#{name.id}"
+  within(dom_section) do
+    expect(page).to have_content content
   end
 end
 

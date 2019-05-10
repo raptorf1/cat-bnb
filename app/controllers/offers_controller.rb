@@ -4,7 +4,7 @@ class OffersController < ApplicationController
   end
 
   def new
-    @offer = Offer.new(offer_params)
+    offer = Offer.new(offer_params)
   end
 
   def create
