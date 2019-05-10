@@ -1,5 +1,8 @@
 class ProfilesController < ApplicationController
-  
+  before_action :authenticate_user!
+  before_action :user_has_profile, only: [:new]
+
+
   def new
     @profile = Profile.new
   end
@@ -16,6 +19,12 @@ class ProfilesController < ApplicationController
   end
 
   private
+
+  def user_has_profile
+    unless current_user.profile === nil
+      redirect_to root_path, notice: "You already have a profile!"
+    end
+  end
   
   def profile_params
     params.require(:profile).permit(:name, :location, :description, :picture)

@@ -30,3 +30,7 @@ end
 When("I click on {string}") do |text|
   click_on text
 end
+
+When("I visit Create profile page") do
+  visit new_profile_path
+end

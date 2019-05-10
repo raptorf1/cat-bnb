@@ -56,4 +56,6 @@ Feature: User can create a Host Profile
     Then I should not see "Become a host"
     And I should see "New listing"
     And I should see "Log out"
+    When I visit Create profile page
+    Then I should see "You already have a profile"
     
