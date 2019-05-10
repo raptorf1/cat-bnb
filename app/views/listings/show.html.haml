@@ -3,10 +3,13 @@
 %p Dates: #{@listing.start_date} to #{@listing.end_date}
 
 %h2 Offers
-- @listing.offers.each do |offer|
-  .offer{id: dom_id(offer)}
+- if @listing.offers.any?
+  - @listing.offers.each do |offer|
+    .offer{id: dom_id(offer)}
     %p= offer.name
     %p= offer.email
     %p= offer.location
     %p #{offer.price} kr
     %button= link_to "Accept offer", "#"
+
+.message There are no offers on this listing
