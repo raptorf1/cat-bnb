@@ -24,5 +24,5 @@ end
 
 Then("I should be on the {string} listing page") do |listing_name|
   name = Listing.find_by(pet_name: listing_name)
-  visit listing_path(name)
+  expect(current_path).to eq listing_path(name)
 end
