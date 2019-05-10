@@ -26,8 +26,9 @@ Then("I should be on offer page") do
   expect(current_path).to eq new_listing_offer_path
 end
 
-Then("I should be on the {string} listing page") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
+Then("I should be on the {string} listing page") do |listing_name|
+  name = Listing.find_by(pet_name: listing_name)
+  visit listing_path(name)
 end
 
 Then("I should be on the landing page") do
