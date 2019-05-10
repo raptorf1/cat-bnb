@@ -1,4 +1,4 @@
-- if user_signed_in? && current_user.profile != nil
+- if user_signed_in? && current_user.profile.nil? == false
   = link_to "New listing", new_listing_path
   = link_to "Log out", destroy_user_session_path, method: :delete
 
