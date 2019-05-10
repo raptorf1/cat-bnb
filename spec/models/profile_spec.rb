@@ -25,8 +25,4 @@ RSpec.describe Profile, type: :model do
     it { is_expected.to belong_to(:user) }
   end
 
-  describe "Authorization" do
-    
-  end
-
 end
