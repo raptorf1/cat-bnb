@@ -12,9 +12,7 @@ Feature: Owner can view offers on Listing page
     | name   | email           | location      | price  | listing |    
     | Felix  | felix@craft.se  | Gothenburg    | 100    | Leif    |
     And I visit the landing page
-    And I should see "Leif"
-    And I should see "Show listing" within "Leif" section
-  @javascript
+  
   Scenario: Owner can click on listing and see correct offers in that listing
     When I click "Show listing" within "Leif" section
     Then I should be on the "Leif" listing page
