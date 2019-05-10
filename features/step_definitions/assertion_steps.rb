@@ -26,7 +26,12 @@ Then("I should be on offer page") do
   expect(current_path).to eq new_listing_offer_path
 end
 
-Then("I should be on show listing page") do
+Then("I should be on the {string} listing page") do |string|
   pending # Write code here that turns the phrase above into concrete actions
 end
+
+Then("I should be on the landing page") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
 

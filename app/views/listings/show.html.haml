@@ -6,10 +6,9 @@
 
 
 
- %h2= Make an offer:
-
+%h2 Create your offer
 = form_with(model: [ @listing, @listing.offers.build ], local: true) do |form| 
- %p
+  %p
     = form.label :name
     %br/
     = form.text_field :name
@@ -21,12 +20,10 @@
     = form.label :location
     %br/
     = form.text_area :location
-      %p
+  %p
     = form.label :price
     %br/
     = form.text_area :price
-    %p
+  %p
     = form.submit "Create offer"
- 
--# <%= link_to 'Edit', edit_article_path(@article) %> |
--# <%= link_to 'Back', articles_path %>
+  = link_to 'Back', root_path

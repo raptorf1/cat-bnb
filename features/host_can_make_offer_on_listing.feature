@@ -18,12 +18,13 @@ Feature: Host can make an offer on a listing
     And I should see "picture1" within "Zane" section
   
   Scenario:
-    When I click on "Make an offer" within "Zane" section
-    Then I should be on offer page
+    When I click "Make an offer" within "Zane" section
+    Then I should be on the "Zane" listing page
     Then I should see "Create your offer"
     And I fill in "Name" with "Steffe"
     And I fill in "Email" with "steffe@gmail.com"
     And I fill in "Location" with "Gothenburg"
     And I fill in "Price/day" with "100kr"
     When I click "Make offer"
-    Then I should be on show listing page
+    And I click "Back"
+    Then I should be on the landing page
