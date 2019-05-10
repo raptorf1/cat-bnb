@@ -14,7 +14,7 @@ Feature: Owner can view offers on Listing page
     And I visit the landing page
     And I should see "Leif"
     And I should see "Show listing" within "Leif" section
-
+  @javascript
   Scenario: Owner can click on listing and see correct offers in that listing
     When I click "Show listing" within "Leif" section
     Then I should be on the "Leif" listing page
@@ -27,6 +27,7 @@ Feature: Owner can view offers on Listing page
     And I should see "Gothenburg"
     And I should see "100 kr"
     And I should see "Accept offer"
+    And I should not see "There are no offers on this listing"
 
   Scenario: Owner can click on listing and see "There are no offers for this listing" if that is the case
     When I click "Show listing" within "Ace" section
