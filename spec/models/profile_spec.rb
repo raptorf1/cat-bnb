@@ -22,7 +22,11 @@ RSpec.describe Profile, type: :model do
   end
 
   describe 'Association' do
-    it { should have_one(:user) }
+    it { is_expected.to belong_to(:user) }
+  end
+
+  describe "Authorization" do
+    
   end
 
 end
