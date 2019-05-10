@@ -25,6 +25,5 @@ Feature: Host can make an offer on a listing
     And I fill in "Email" with "steffe@gmail.com"
     And I fill in "Location" with "Gothenburg"
     And I fill in "Price" with "100kr"
-    When I click "Make offer"
-    And I click "Back"
+    When I click "Create offer" button
     Then I should be on the landing page
