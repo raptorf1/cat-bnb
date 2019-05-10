@@ -7,8 +7,10 @@ class OffersController < ApplicationController
     @offer = Offer.new(offer_params)
   end
 
-  def show
-    @offer = Listing.find(params[:id])
+  def create
+    @listing = Listing.find(params[:listing_id])
+    @offer = @listing.offers.create(offer_params)
+    redirect_to root_path(@listing)
   end
   
 
