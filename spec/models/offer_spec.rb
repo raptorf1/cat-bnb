@@ -25,4 +25,4 @@ RSpec.describe Offer, type: :model do
       expect(FactoryBot.create(:offer)).to be_valid
     end
   end
-endgit stat
+end
