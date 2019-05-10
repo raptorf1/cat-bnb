@@ -4,8 +4,6 @@
 %p Dates: #{@listing.start_date} to #{@listing.end_date}
 %p=@listing.pet_picture
 
-
-
 %h2 Create your offer
 = form_with(model: [ @listing, @listing.offers.build ], local: true) do |form| 
   %p
@@ -23,7 +21,7 @@
   %p
     = form.label :price
     %br/
-    = form.text_area :price
+    = form.number_field :price
   %p
     = form.submit "Create offer"
   
