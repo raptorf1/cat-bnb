@@ -22,7 +22,7 @@ RSpec.describe Profile, type: :model do
   end
 
   describe 'Association' do
-    it { should belong_to(:user) }
+    it { should have_one(:user) }
   end
 
 end

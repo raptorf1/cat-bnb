@@ -45,10 +45,15 @@ Feature: User can create a Host Profile
     Then I should see "Please fill in all fields"
 
   Scenario: Registered user can only create 1 profile
-    Given the following profile exist
-      | name   | location | descriptio | picture                        |
-      | George | Greece   | Sunny      | https://www.pivotaltracker.com |
+    Given the following user exist
+      | email              | password |
+      | george@saloniki.gr | password |
+    Given the following profile exist for a user
+      | name   | location | description | picture                        | user                |
+      | George | Greece   | Sunny       | https://www.pivotaltracker.com | george@saloniki.gr  |
+    Given I am logged in as "george@saloniki.gr"
     When I visit the landing page
-    And I click "Become a host" link
-    Then I should see "You already have a host profile"
+    Then I should not see "Become a host"
+    And I should see "New listing"
+    And I should see "Log out"
     

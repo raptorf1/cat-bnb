@@ -13,7 +13,7 @@ RSpec.describe User, type: :model do
   end
 
   describe 'Association' do
-    it { should have_one(:profile) }
+    it { should belong_to(:profile).optional }
   end
 
 end
