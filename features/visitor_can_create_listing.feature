@@ -4,7 +4,11 @@ Feature: Visitor can create listing
   I would like to be able to submit listing form and see it on the landing page
 
   Background:
-    Given I visit the New listings page
+    Given the following user exist
+      | email              | password |
+      | george@saloniki.gr | password |
+    And I am logged in as "george@saloniki.gr"
+    And I visit the New listings page
 
   Scenario: Visitor can succesfully create a listing
     When I fill in "Pet name" with "Leif"

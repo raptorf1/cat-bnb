@@ -4,7 +4,11 @@ Feature: Host can fill in a listing form
   I need to be able to fill in a listing form.
 
   Scenario: Host can succesully view and fill in all fields in a listing form, without creating it
-    Given I visit the New listings page
+    Given the following user exist
+      | email              | password |
+      | george@saloniki.gr | password |
+    And I am logged in as "george@saloniki.gr"
+    And I visit the New listings page
     Then I should see "Create new listing"
     And I fill in "Pet name" with "George"
     And I fill in "Pet location" with "Stockholm"

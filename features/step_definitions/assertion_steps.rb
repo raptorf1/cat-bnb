@@ -21,3 +21,15 @@ end
 Then("I should be on landing page") do
   expect(current_path).to eq root_path
 end
+
+Then("I should be on Create profile page") do
+  expect(current_path).to eq new_profile_path 
+end
+
+Then("I should be on the Log in page") do 
+  expect(current_path).to eq new_user_session_path
+end
+
+Then("I should not see {string}") do |content|
+  expect(page).to have_no_content content  
+end
