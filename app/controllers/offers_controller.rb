@@ -10,7 +10,12 @@ class OffersController < ApplicationController
   def create
     @listing = Listing.find(params[:listing_id])
     @offer = @listing.offers.create(offer_params)
-    redirect_to root_path(@listing)
+    
+    if listing.persisted?
+      redirect_to root_path(@listing)
+    else
+      redirect_to new_listing_path, notice: "Please fill in all fields"
+    end
   end
   
 

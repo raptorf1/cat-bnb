@@ -17,7 +17,7 @@ Feature: Host can make an offer on a listing
     And I should see "2019-06-29" within "Zane" section
     And I should see "picture1" within "Zane" section
   
-  Scenario:
+  Scenario: Host can successfully create an offer
     When I click "Make an offer" within "Zane" section
     Then I should be on the "Zane" listing page
     Then I should see "Create your offer"
@@ -27,3 +27,13 @@ Feature: Host can make an offer on a listing
     And I fill in "Price" with "100kr"
     When I click "Create offer" button
     Then I should be on landing page
+
+  Scenario: Host can not create an offer when not all the fields are filled in.
+    When I click "Make an offer" within "Zane" section
+    Then I should be on the "Zane" listing page
+    Then I should see "Create your offer"
+    And I fill in "Name" with "Steffe"
+    And I fill in "Location" with "Gothenburg"
+    And I fill in "Price" with "100kr"
+    When I click "Create offer" button
+    Then I should see "Please fill in all fields correctly"
