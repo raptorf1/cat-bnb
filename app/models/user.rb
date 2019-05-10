@@ -3,5 +3,13 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  belongs_to :profile, optional: true
+  has_one :profile
+  
+  def create_profile(params={})
+    if self.profile.nil?
+      super
+    else
+      errors.add(:base, "Profile already exists")
+    end
+  end
 end
