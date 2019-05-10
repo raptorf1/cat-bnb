@@ -4,5 +4,6 @@ FactoryBot.define do
     email { "MyString" }
     location { "MyString" }
     price { 1 }
+    listing
   end
 end

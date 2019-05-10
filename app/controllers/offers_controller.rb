@@ -10,7 +10,7 @@ class OffersController < ApplicationController
   def create
     @listing = Listing.find(params[:listing_id])
     @offer = @listing.offers.create(offer_params)
-    # binding.pry
+
     if @offer.persisted?
       redirect_to root_path
     else
