@@ -31,4 +31,6 @@ Then("I should be on the {string} listing page") do |listing_name|
   visit listing_path(name)
 end
 
-
+# Then("stop") do
+#   binding.pry
+# end

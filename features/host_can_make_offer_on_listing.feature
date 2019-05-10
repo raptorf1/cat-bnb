@@ -16,7 +16,7 @@ Feature: Host can make an offer on a listing
     And I should see "2019-06-28" within "Zane" section
     And I should see "2019-06-29" within "Zane" section
     And I should see "picture1" within "Zane" section
-  
+
   Scenario: Host can successfully create an offer
     When I click "Make an offer" within "Zane" section
     Then I should be on the "Zane" listing page
