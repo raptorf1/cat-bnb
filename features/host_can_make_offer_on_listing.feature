@@ -10,14 +10,9 @@ Feature: Host can make an offer on a listing
     | Carla     | Stockholm       | I love cats!      | 2019-05-28      | 2019-06-01    | picture2    |
 
     When I visit the landing page
-    Then I should see "Zane"
-    And I should see "Gothenburg" within "Zane" section
-    And I should see "I'm nice" within "Zane" section
-    And I should see "2019-06-28" within "Zane" section
-    And I should see "2019-06-29" within "Zane" section
-    And I should see "picture1" within "Zane" section
 
   Scenario: Host can successfully create an offer
+    Then I should see "Zane"
     When I click "Make an offer" within "Zane" section
     Then I should be on the "Zane" listing page
     Then I should see "Create your offer"
