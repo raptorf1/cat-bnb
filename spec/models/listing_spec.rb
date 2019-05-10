@@ -20,8 +20,8 @@ RSpec.describe Listing, type: :model do
     it { is_expected.to validate_presence_of :pet_picture }
   end
   
-  describe 'Asssociations' do
-    it { should have_many(:offers)}
+  describe 'Associations' do
+    it { is_expected.to have_many(:offers)}
   end
 
   describe 'Factory' do

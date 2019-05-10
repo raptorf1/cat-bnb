@@ -17,7 +17,7 @@ RSpec.describe Offer, type: :model do
   end
 
   describe 'Associations' do
-    it { should belong_to(:listing)}
+    it { is_expected.to belong_to(:listing)}
   end
 
   describe 'Factory' do
@@ -25,4 +25,4 @@ RSpec.describe Offer, type: :model do
       expect(FactoryBot.create(:offer)).to be_valid
     end
   end
-end
+endgit stat
