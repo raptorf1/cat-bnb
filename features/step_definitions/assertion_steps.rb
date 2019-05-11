@@ -33,3 +33,11 @@ end
 Then("I should not see {string}") do |content|
   expect(page).to have_no_content content  
 end
+
+When("I click on {string} within {string} section") do |link, section|
+  name = Listing.find_by(pet_name: section)
+  dom_section = "#listing_#{name.id}"
+  within(dom_section) do
+    click_on link
+  end
+end

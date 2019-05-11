@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   root controller: :listings, action: :index
 
-  resources :listings, only: [:new, :create]
+  resources :listings, only: [:new, :show, :create]
 
   resources :profiles, only: [:new, :create]
 
