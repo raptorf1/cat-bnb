@@ -8,6 +8,11 @@
   = link_to "Log out", destroy_user_session_path, method: :delete
 
 - else
+  %nav{:class => "flex items-center justify-between flex-wrap bg-teal p-6"}
+    %div{:class => "flex items-center flex-no-shrink text-white mr-6"}
+    %img{:class => "fill-current h-8 w-8 mr-2", :width => "54", :height => "54", :viewBox => "0 0 54 54", :xmlns => "http://www.w3.org/2000/svg"}
+    %span{:class => "font-semibold text-xl tracking-tight"} Tailwind CSS 
+
   = link_to "Become a host", new_user_session_path
   = link_to "New listing", new_user_session_path
   = link_to "Sign up", new_user_registration_path
