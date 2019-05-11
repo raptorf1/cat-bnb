@@ -1,6 +1,14 @@
-%p Welcome
-= link_to "Become a host", "#"
-= link_to "New listing", new_listing_path
-= link_to "Sign up", "#"
-= link_to "Log in", "#"
-= link_to "Log out", "#"
+- if user_signed_in? && current_user.profile.nil? == false
+  = link_to "New listing", new_listing_path
+  = link_to "Log out", destroy_user_session_path, method: :delete
+
+- elsif user_signed_in?
+  = link_to "Become a host", new_profile_path
+  = link_to "New listing", new_listing_path
+  = link_to "Log out", destroy_user_session_path, method: :delete
+
+- else
+  = link_to "Become a host", new_user_session_path
+  = link_to "New listing", new_user_session_path
+  = link_to "Sign up", new_user_registration_path
+  = link_to "Log in", new_user_session_path
