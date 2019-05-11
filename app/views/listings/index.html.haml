@@ -1,9 +1,9 @@
-%h1 Listings
-- @listings.each do |listing|
-  .listing
-    .listing_inside
-      .listing_image #{image_tag "https://image.freepik.com/free-photo/white-cat-lies-woman-s-knees_8353-539.jpg"} #{listing.pet_picture}
-      .listing_content
+.listing_container
+  %h1.catbnb Listings
+  - @listings.each do |listing|
+    .listing_item
+      .listing_image{ :style => "background: url('#{listing.pet_picture}') no-repeat center top; background-size:cover;" }
+      .listing_content 
         .listing_text
           %p.listing_pet_name #{listing.pet_name}, #{listing.pet_location}
           %p.listing_fields #{listing.pet_description}
