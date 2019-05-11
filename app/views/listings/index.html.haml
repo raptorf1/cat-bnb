@@ -2,14 +2,11 @@
 - @listings.each do |listing|
   .listing
     .listing_inside
-      .listing_image #{image_tag "https://image.freepik.com/free-photo/white-cat-lies-woman-s-knees_8353-539.jpg"}
+      .listing_image #{image_tag "https://image.freepik.com/free-photo/white-cat-lies-woman-s-knees_8353-539.jpg"} #{listing.pet_picture}
       .listing_content
         .listing_text
-          %p.listing_pet_name #{listing.pet_name}
-          %p.listing_fields #{listing.pet_location}
+          %p.listing_pet_name #{listing.pet_name}, #{listing.pet_location}
           %p.listing_fields #{listing.pet_description}
-          %p.listing_fields #{listing.start_date}
-          %p.listing_fields #{listing.end_date}
-          %p.listing_fields #{listing.pet_picture}
+          %p.listing_fields #{listing.start_date} - #{listing.end_date}
         .button_div
           %button.listing_button #{link_to 'Make an offer', listing_path(listing)}
