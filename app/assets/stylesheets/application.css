@@ -14,6 +14,47 @@
  *= require_self
  */
 
- body{
+ body {
    background-color: red;
+ }
+
+ .listing {
+   background-color: green;
+   
+ }
+
+ .listing_inside {
+   display: flex;
+   align: items-center;
+ }
+
+ .listing_image {
+  display: block;
+  height: 150px
+ }
+
+ .listing_content {
+   align: text-center;
+   flex-grow: 1
+ }
+
+ .listing_text {
+  margin-bottom: 20px;
+ }
+
+ .listing_pet_name {
+   font-size: 30px;
+ }
+
+ .listing_fields {
+  font-size: 15px;
+ }
+
+ .button_div {
+ }
+
+ .listing_button {
+  font-size: 10px;
+  background-color: aqua;
+  padding: 5px;
  }

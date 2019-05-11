@@ -1,10 +1,16 @@
-%h1 Listings#index
+%h1 Listings
 - @listings.each do |listing|
   .listing{id: dom_id(listing)}
-    %p= listing.pet_name
-    %p= listing.pet_location
-    %p= listing.pet_description
-    %p= listing.start_date
-    %p= listing.end_date
-    %p= listing.pet_picture
-    = link_to 'Make an offer', listing_path(listing)
+  .listing
+    .listing_inside
+      .listing_image {:alt => "", :src => ""}/
+      .listing_content
+        .listing_text
+          %p.listing_pet_name #{listing.pet_name}
+          %p.listing_fields #{listing.pet_location}
+          %p.listing_fields #{listing.pet_description}
+          %p.listing_fields #{listing.start_date}
+          %p.listing_fields #{listing.end_date}
+          %p.listing_fields #{listing.pet_picture}
+        .button_div
+          %button.listing_button #{link_to 'Make an offer', listing_path(listing)}
