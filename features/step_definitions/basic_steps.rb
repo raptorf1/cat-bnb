@@ -15,7 +15,7 @@ When("I fill in {string} with {string}") do |field, content|
 end
 
 When("I click {string} button") do |button|
-  click_on button
+  click_button button
 end
 
 When("I click on {string} within {string} section") do |content, section|
@@ -32,4 +32,20 @@ When("I click {string} within {string} section") do |link, section|
   within(dom_section) do
     click_on link
   end
+end
+Then "stop" do
+  binding.pry
+end
+
+Given("I am logged in as {string}") do |email|
+  user = User.find_by(email: email)
+  login_as(user, scope: :user) 
+end
+
+When("I click on {string}") do |text|
+  click_on text
+end
+
+When("I visit Create profile page") do
+  visit new_profile_path
 end

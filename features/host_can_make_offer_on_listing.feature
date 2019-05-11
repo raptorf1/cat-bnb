@@ -9,6 +9,11 @@ Feature: Host can make an offer on a listing
     | Zane      | Gothenburg      | I'm nice          | 2019-06-28      | 2019-06-29    | picture1    |
     | Carla     | Stockholm       | I love cats!      | 2019-05-28      | 2019-06-01    | picture2    |
 
+    Given the following user exist
+      | email        | password   |
+      | boa@snake.se | pswrd12345 |
+
+    Given I am logged in as "boa@snake.se"
     When I visit the landing page
 
   Scenario: Host can successfully create an offer
