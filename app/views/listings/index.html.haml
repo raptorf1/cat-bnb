@@ -1,9 +1,8 @@
 %h1 Listings
 - @listings.each do |listing|
-  .listing{id: dom_id(listing)}
   .listing
     .listing_inside
-      .listing_image {:alt => "", :src => ""}/
+      .listing_image #{image_tag "https://image.freepik.com/free-photo/white-cat-lies-woman-s-knees_8353-539.jpg"}
       .listing_content
         .listing_text
           %p.listing_pet_name #{listing.pet_name}

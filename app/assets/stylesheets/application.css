@@ -19,8 +19,8 @@
  }
 
  .listing {
-   background-color: green;
-   
+   border: 1px solid #d4d3d3;
+   margin-bottom: 30px;
  }
 
  .listing_inside {
@@ -30,7 +30,7 @@
 
  .listing_image {
   display: block;
-  height: 150px
+  width:7rem;
  }
 
  .listing_content {
@@ -40,6 +40,7 @@
 
  .listing_text {
   margin-bottom: 20px;
+  padding: 20px 20px 10px 20px;
  }
 
  .listing_pet_name {
@@ -48,9 +49,12 @@
 
  .listing_fields {
   font-size: 15px;
+  line-height: 21px;
  }
 
  .button_div {
+  padding: 0px 20px 20px 20px;
+  text-align: right;
  }
 
  .listing_button {
