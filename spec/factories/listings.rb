@@ -6,5 +6,6 @@ FactoryBot.define do
     start_date { "01/01/2020" }
     end_date { "01/05/2020" }
     pet_picture { "MyString" }
+    association :owner, factory: :user 
   end
 end

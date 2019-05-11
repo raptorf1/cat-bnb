@@ -18,3 +18,12 @@ Given("the following profile exist for a user") do |table|
       .merge(user: profile_user))
   end
 end
+
+Given("the following listings exist for an owner") do |table|
+  table.hashes.each do |listing|
+    owner = User.find_or_create_by(email: listing[:owner])
+    FactoryBot.create(:listing, listing
+      .except('owner')
+      .merge(owner: owner))
+  end  
+end

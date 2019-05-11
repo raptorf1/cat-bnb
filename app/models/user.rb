@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_one :profile
   
+  
   def create_profile(params={})
     if self.profile.nil?
       super
