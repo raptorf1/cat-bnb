@@ -10,6 +10,6 @@
       %p= offer.email
       %p= offer.location
       %p #{offer.price} kr
-      %p= link_to "Accept offer", "#"
-- else
+      %p= link_to "Accept offer", [offer, offer.update(status: "accepted")], method: :put
+      
   .message There are no offers on this listing
