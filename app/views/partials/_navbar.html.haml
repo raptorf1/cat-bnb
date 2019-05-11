@@ -1,17 +1,9 @@
 - if user_signed_in? && current_user.profile.nil? == false
-  = link_to "New listing", new_listing_path
-  = link_to "Log out", destroy_user_session_path, method: :delete
-
-- elsif user_signed_in?
-  = link_to "Become a host", new_profile_path
-  = link_to "New listing", new_listing_path
-  = link_to "Log out", destroy_user_session_path, method: :delete
-
-- else
   %nav{:class => "flex items-center justify-between flex-wrap bg-red-light p-6"}
     %div{:class => "flex items-center flex-no-shrink text-white mr-6"}
-    = image_tag "Cat_Logo_Navbar.png", alt: "cat_image_logo", height: "54", width: "54", class: "fill-current h-8 w-8 mr-2", viewBox: "0 0 54 54"
-    %span{:class => "font-semibold text-xl tracking-tight"} BnB
+    = link_to root_path do
+      = image_tag "logo.svg", alt: "cat_image_logo", height: "54", width: "54", class: "fill-current h-10 w-10 mr-2", viewBox: "0 0 54 54"
+    %span{:class => "font-extrabold text-xl tracking-tight text-white"} B n B
     %div{:class => "block lg:hidden"}
       %button{:class => "flex items-center px-3 py-2 border rounded text-teal-lighter border-teal-light hover:text-white hover:border-white"}
         %svg{:class => "fill-current h-3 w-3", :viewBox => "0 0 20 20", :xmlns => "http://www.w3.org/2000/svg"}
@@ -19,10 +11,46 @@
           %path{:d => "M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"}
     %div{:class => "w-full block flex-grow lg:flex lg:items-center lg:w-auto"}
       %div{:class => "text-sm lg:flex-grow"}
-      = link_to "Become a host", new_user_session_path, class: "block mt-4 lg:inline-block lg:mt-0 text-white hover:text-teal mr-4"
+      = link_to "New listing", new_listing_path, class: "block mt-4 lg:inline-block lg:mt-0 text-black hover:text-teal mr-4 font-extrabold"
       %div{:class => "text-sm lg:flex-grow"}
-      = link_to "New listing", new_user_session_path, class: "block mt-4 lg:inline-block lg:mt-0 text-white hover:text-teal mr-4"
+      = link_to "Log out", destroy_user_session_path, method: :delete, class: "block mt-4 lg:inline-block lg:mt-0 text-black hover:text-teal font-extrabold"
+
+- elsif user_signed_in?
+  %nav{:class => "flex items-center justify-between flex-wrap bg-red-light p-6"}
+    %div{:class => "flex items-center flex-no-shrink text-white mr-6"}
+    = link_to root_path do
+      = image_tag "logo.svg", alt: "cat_image_logo", height: "54", width: "54", class: "fill-current h-10 w-10 mr-2", viewBox: "0 0 54 54"
+    %span{:class => "font-extrabold text-xl tracking-tight text-white"} B n B
+    %div{:class => "block lg:hidden"}
+      %button{:class => "flex items-center px-3 py-2 border rounded text-teal-lighter border-teal-light hover:text-white hover:border-white"}
+        %svg{:class => "fill-current h-3 w-3", :viewBox => "0 0 20 20", :xmlns => "http://www.w3.org/2000/svg"}
+          %title Menu
+          %path{:d => "M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"}
+    %div{:class => "w-full block flex-grow lg:flex lg:items-center lg:w-auto"}
       %div{:class => "text-sm lg:flex-grow"}
-      = link_to "Sign up", new_user_session_path, class: "block mt-4 lg:inline-block lg:mt-0 text-white hover:text-teal mr-4"
+      = link_to "Become a host", new_profile_path, class: "block mt-4 lg:inline-block lg:mt-0 text-black hover:text-teal mr-4 font-extrabold"
       %div{:class => "text-sm lg:flex-grow"}
-      = link_to "Log in", new_user_session_path, class: "block mt-4 lg:inline-block lg:mt-0 text-white hover:text-teal"
+      = link_to "New listing", new_listing_path, class: "block mt-4 lg:inline-block lg:mt-0 text-black hover:text-teal mr-4 font-extrabold"
+      %div{:class => "text-sm lg:flex-grow"}
+      = link_to "Log out", destroy_user_session_path, method: :delete, class: "block mt-4 lg:inline-block lg:mt-0 text-black hover:text-teal font-extrabold"
+
+- else
+  %nav{:class => "flex items-center justify-between flex-wrap bg-red-light p-6"}
+    %div{:class => "flex items-center flex-no-shrink text-white mr-6"}
+    = link_to root_path do
+      = image_tag "logo.svg", alt: "cat_image_logo", height: "54", width: "54", class: "fill-current h-10 w-10 mr-2", viewBox: "0 0 54 54"
+    %span{:class => "font-extrabold text-xl tracking-tight text-white"} B n B
+    %div{:class => "block lg:hidden"}
+      %button{:class => "flex items-center px-3 py-2 border rounded text-teal-lighter border-teal-light hover:text-white hover:border-white"}
+        %svg{:class => "fill-current h-3 w-3", :viewBox => "0 0 20 20", :xmlns => "http://www.w3.org/2000/svg"}
+          %title Menu
+          %path{:d => "M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"}
+    %div{:class => "w-full block flex-grow lg:flex lg:items-center lg:w-auto"}
+      %div{:class => "text-sm lg:flex-grow"}
+      = link_to "Become a host", new_user_session_path, class: "block mt-4 lg:inline-block lg:mt-0 text-black hover:text-teal mr-4 font-extrabold"
+      %div{:class => "text-sm lg:flex-grow"}
+      = link_to "New listing", new_user_session_path, class: "block mt-4 lg:inline-block lg:mt-0 text-black hover:text-teal mr-4 font-extrabold"
+      %div{:class => "text-sm lg:flex-grow"}
+      = link_to "Sign up", new_user_registration_path, class: "block mt-4 lg:inline-block lg:mt-0 text-black hover:text-teal mr-4 font-extrabold"
+      %div{:class => "text-sm lg:flex-grow"}
+      = link_to "Log in", new_user_session_path, class: "block mt-4 lg:inline-block lg:mt-0 text-black hover:text-teal font-extrabold"
