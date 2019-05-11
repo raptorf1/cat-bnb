@@ -26,8 +26,9 @@ RSpec.describe Listing, type: :model do
     end
   end
 
-  describe 'Association' do
+  describe 'Associations' do
     it { is_expected.to belong_to(:owner) }
+    it { is_expected.to have_many(:offers) }
   end
 
 end
