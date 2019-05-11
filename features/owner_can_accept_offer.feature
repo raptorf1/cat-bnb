@@ -21,6 +21,6 @@ Feature: Owner can accept an offer
     When I click on "Show listing" within "Leif" section
     Then I should see "Felix"
     And I should see "Carla"
-    When I click "Accept offer" on "Felix" offer
+    When I click on "Accept offer" within "Felix" offer
     Then I should see "You have acepted offer from Felix"
     And I should not see "Carla"

@@ -34,3 +34,19 @@ end
 When("I visit Create profile page") do
   visit new_profile_path
 end
+
+When("I click on {string} within {string} section") do |link, section|
+  name = Listing.find_by(pet_name: section)
+  dom_section = "#listing_#{name.id}"
+  within(dom_section) do
+    click_on link
+  end
+end
+
+When("I click on {string} within {string} offer") do |link, section|
+  name = Offer.find_by(name: section)
+  dom_section = "#offer_#{name.id}"
+  within(dom_section) do
+    click_on link
+  end
+end
