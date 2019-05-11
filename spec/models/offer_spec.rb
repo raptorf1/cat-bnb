@@ -7,6 +7,7 @@ RSpec.describe Offer, type: :model do
     it { is_expected.to have_db_column :email }
     it { is_expected.to have_db_column :location }
     it { is_expected.to have_db_column :price }
+    it { is_expected.to have_db_column :status }
   end
 
   describe 'Validations' do
