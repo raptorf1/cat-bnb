@@ -17,7 +17,7 @@ Feature: Host can make an offer on a listing
     When I visit the landing page
 
   Scenario: Host can successfully create an offer
-    When I click "Make an offer" within "Zane" section
+    When I click on "Make an offer" within "Zane" section
     Then I should be on the "Zane" listing page
     And I should see "Create your offer"
     When I fill in "Name" with "Steffe"
@@ -28,7 +28,7 @@ Feature: Host can make an offer on a listing
     Then I should be on landing page
 
   Scenario: Host can not create an offer when not all the fields are filled in.
-    When I click "Make an offer" within "Zane" section
+    When I click on "Make an offer" within "Zane" section
     Then I should be on the "Zane" listing page
     And I should see "Create your offer"
     And I fill in "Name" with "Steffe"

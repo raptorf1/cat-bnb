@@ -1,11 +1,12 @@
-%h1 Listings#index
-- @listings.each do |listing|
-  .listing{id: dom_id(listing)}
-    %p= listing.pet_name
-    %p= listing.pet_location
-    %p= listing.pet_description
-    %p= listing.start_date
-    %p= listing.end_date
-    %p= listing.pet_picture
-    %p= link_to "Show listing", listing_path(listing)
-    %p= link_to 'Make an offer', listing_path(listing)
+.listing_container
+  %h1.catbnb Listings
+  - @listings.each do |listing|
+    .listing_item{id: dom_id(listing)}
+      .listing_image{ :style => "background: url('#{listing.pet_picture}') no-repeat center top; background-size:cover;" }
+      .listing_content 
+        .listing_text
+          %p.listing_pet_name #{listing.pet_name}, #{listing.pet_location}
+          %p.listing_fields #{listing.pet_description}
+          %p.listing_fields #{listing.start_date} - #{listing.end_date}
+        .button_div
+          %p.listing_button= link_to 'Make an offer', listing_path(listing)
