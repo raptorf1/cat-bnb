@@ -94,9 +94,12 @@
   width: 110px;
   text-align: center;
   float: right;
- }
-
+}
+ input[type="date"],
+ input[type="url"],
  input[type="text"],
+ input[type="email"],
+ input[type="password"],
  input[type="number"] {
   height: 38px;
   overflow: visible;
@@ -105,9 +108,8 @@
   margin-bottom: 13px;
   width: 100%;
   font-size: 17px;
-  }
-
-  textarea {
+}
+textarea {
     overflow: visible;
     border: 1px solid #cacaca;
     padding: 7px;
@@ -115,4 +117,4 @@
     width: 100%;
     font-size: 17px;
 
-  }
+}
