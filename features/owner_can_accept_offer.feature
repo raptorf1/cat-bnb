@@ -22,6 +22,5 @@ Feature: Owner can accept an offer
     Then I should see "Felix"
     And I should see "Carla"
     When I click on "Accept offer" within "Felix" offer
-    Then stop
     Then I should see "You have acepted offer from Felix"
     And I should not see "Carla"

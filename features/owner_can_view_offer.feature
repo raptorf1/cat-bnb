@@ -7,25 +7,25 @@ Feature: Owner can view offers on Listing page
     Given the following user exist
       | email              | password |
       | george@saloniki.gr | password |
-    
-    Given the following listings exist
-    | pet_name  | pet_location    | pet_description   | start_date      | end_date      | pet_picture |
-    | Leif      | Gothenburg      | I'm nice          | 2019-06-28      | 2019-06-29    | picture1    |
-    | Ace       | Stockholm       | I'm nice          | 2019-06-28      | 2019-06-29    | picture2    |
-    
+
+    Given the following listings exist for a user
+      | pet_name | pet_location | pet_description | start_date | end_date   | pet_picture                      | user               |
+      | Leif     | Gothenburg   | I'm nice        | 2019-06-28 | 2019-06-29 | http://localhost:3000/listings/1 | george@saloniki.gr |
+      | Ace      | Stockholm    | I'm nice        | 2019-06-28 | 2019-06-29 | http://localhost:3000/listings/1 | george@saloniki.gr |
+
     And the following offers exists on a listing
-    | name   | email           | location      | price  | listing |    
-    | Felix  | felix@craft.se  | Gothenburg    | 100    | Leif    |
-    
+      | name  | email          | location   | price | listing |
+      | Felix | felix@craft.se | Gothenburg | 100   | Leif    |
+
     And I am logged in as "george@saloniki.gr"
     And I visit the landing page
-  
+
   Scenario: Owner can click on listing and see correct offers in that listing
     When I click on "Show listing" within "Leif" section
     Then I should be on the "Leif" listing page
     And I should see "Leif"
     #And I should see "picture1"
-    And I should see "Dates: 2019-06-28 to 2019-06-29" 
+    And I should see "Dates: 2019-06-28 to 2019-06-29"
     And I should see "Offers"
     And I should see "Felix"
     And I should see "felix@craft.se"

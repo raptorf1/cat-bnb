@@ -23,8 +23,8 @@ Feature: Visitor can create listing
     And I should see "Leif"
     And I should see "Stockholm" within "Leif" section
     And I should see "Cutest cat ever" within "Leif" section
-    And I should see "2019-06-28" within "Leif" section
-    And I should see "2019-06-29" within "Leif" section
+    And I should see "90628-02-01" within "Leif" section
+    And I should see "90629-02-01" within "Leif" section
     #And I should see "string" within "Leif" section
   
   Scenario: Visitor can not create a listing when not all fields are filled in
