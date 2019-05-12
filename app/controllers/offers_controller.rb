@@ -13,10 +13,10 @@ class OffersController < ApplicationController
     end
   end
 
-  def update
-    @offer = Offer.find(params[:id])
-    @offer.update(status: "accepted")
-  end
+  # def update
+  #   @offer = Offer.find(params[:id])
+  #   @offer.update(status: "accepted")
+  # end
 
 
   private

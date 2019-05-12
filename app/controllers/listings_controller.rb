@@ -25,6 +25,13 @@ class ListingsController < ApplicationController
     end
   end
 
+  def accept
+    @listing = Listing.find(params[:listing_id])
+    @offer = Offer.find(params[:id])
+    @offer.update(status: "accepted")
+  end
+
+
   private
     def listing_params
       params.require(:listing).permit(:pet_name, :pet_location, :pet_description, :start_date, :end_date, :pet_picture)
