@@ -8,7 +8,7 @@ RSpec.describe Offer, type: :model do
     it { is_expected.to have_db_column :location }
     it { is_expected.to have_db_column :price }
   end
-
+  
   describe 'Validations' do
     it { is_expected.to validate_presence_of :name }
     it { is_expected.to validate_presence_of :email }
@@ -19,7 +19,7 @@ RSpec.describe Offer, type: :model do
   describe 'Associations' do
     it { is_expected.to belong_to(:listing)}
   end
-
+  
   describe 'Factory' do
     it 'should have a valid Factory' do
       expect(FactoryBot.create(:offer)).to be_valid
