@@ -21,7 +21,7 @@ Feature: Owner can view offers on Listing page
     And I visit the landing page
   
   Scenario: Owner can click on listing and see correct offers in that listing
-    When I click "Show listing" within "Leif" section
+    When I click on "Show listing" within "Leif" section
     Then I should be on the "Leif" listing page
     And I should see "Leif"
     And I should see "picture1"
@@ -35,6 +35,6 @@ Feature: Owner can view offers on Listing page
     And I should not see "There are no offers on this listing"
 
   Scenario: Owner can click on listing and see "There are no offers for this listing" if that is the case
-    When I click "Show listing" within "Ace" section
+    When I click on "Show listing" within "Ace" section
     Then I should be on the "Ace" listing page
     And I should see "There are no offers on this listing"
