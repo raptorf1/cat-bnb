@@ -14,7 +14,11 @@ class ListingsController < ApplicationController
   end
 
   def create
-    listing = Listing.create(listing_params)
+    listing = Listing.new(listing_params)
+    listing.user_id = current_user.id
+    listing.save
+    
+    #binding.pry
 
     if listing.persisted?
       redirect_to root_path

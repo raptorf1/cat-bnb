@@ -7,8 +7,8 @@ Feature: Owner can accept an offer
     Given the following user exist
       | email         | password   |
       | zane@craft.se | pswrd12345 |
-    And the following listings exist for an owner
-      | pet_name  | pet_location    | pet_description   | start_date      | end_date      | pet_picture | owner          |
+    And the following listings exist for a user
+      | pet_name  | pet_location    | pet_description   | start_date      | end_date      | pet_picture | user           |
       | Leif      | Gothenburg      | I'm nice          | 2019-06-28      | 2019-06-29    | picture1    | zane@craft.se  |
     And the following offers exists on a listing
       | name   | email           | location      | price  | listing |  
@@ -21,6 +21,7 @@ Feature: Owner can accept an offer
     When I click on "Show listing" within "Leif" section
     Then I should see "Felix"
     And I should see "Carla"
+    Then stop
     When I click on "Accept offer" within "Felix" offer
     Then I should see "You have acepted offer from Felix"
     And I should not see "Carla"

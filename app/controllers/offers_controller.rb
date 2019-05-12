@@ -11,10 +11,19 @@ class OffersController < ApplicationController
     end
   end
 
+  # def status_accept
+  #   @listing = Listing.find(params[:listing_id])
+  #   @offer = @listing.offers.find(params[:id])
+  #   @offer.update(status: "accepted")
+  # end
+
   def update
-    @listing = Listing.find(params[:listing_id])
-    @offer = @listing.offers.create(offer_params)
+    #@listing = Listing.find(params[:listing_id])
+    @offer = Offer.find(params[:id])
+    @offer.update(status: "accepted")
+    
   end
+
 
   private
   def offer_params
