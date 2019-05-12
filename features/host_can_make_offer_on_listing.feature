@@ -36,3 +36,4 @@ Feature: Host can make an offer on a listing
     And I fill in "Price" with "100kr"
     When I click "Create offer" button
     Then I should see "Please fill in all fields correctly"
+    

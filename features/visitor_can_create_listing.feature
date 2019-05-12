@@ -1,3 +1,4 @@
+@javascript
 Feature: Visitor can create listing
   As a Visitor
   In order to publish my listing
@@ -16,7 +17,7 @@ Feature: Visitor can create listing
     And I fill in "Pet description" with "Cutest cat ever"
     And I fill in "Start date" with "2019-06-28"
     And I fill in "End date" with "2019-06-29"
-    And I fill in "Pet picture" with "string"
+    And I fill in "Pet picture" with "http://localhost:3000/"
     And I click "Create Listing" button
     Then I should be on landing page
     And I should see "Leif"
