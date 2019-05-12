@@ -9,4 +9,4 @@
           %p.listing_fields #{listing.pet_description}
           %p.listing_fields #{listing.start_date} - #{listing.end_date}
         .button_div
-          %button.listing_button #{link_to 'Make an offer', listing_path(listing)}
+          %p.listing_button= link_to 'Make an offer', listing_path(listing)

@@ -33,7 +33,7 @@
  }
 
  .content{
-   margin:8% 15% 0% 15%;
+   margin:5% 10% 0% 10%;
    background-color:white;
    padding: 70px;
  }
@@ -87,10 +87,13 @@
 
  .listing_button {
   font-size: 15px;
-  background-color: #70bf57;
+  background-color: #ef5753;
   color: white;
-  padding: 7px;
+  padding: 5px;
   border-radius: 4px;
+  width: 110px;
+  text-align: center;
+  float: right;
  }
 
  input[type="text"],
