@@ -16,7 +16,7 @@ class OffersController < ApplicationController
     if @offer.persisted?
       redirect_to root_path
     else
-      redirect_to listing_path(@listing), notice: "Please fill in all fields correctly"
+      redirect_to listing_path(@listing), notice: "Please fill in all fields"
     end
   end
 
