@@ -16,21 +16,24 @@
  */
 
  h1.catbnb {
-   font-size:30px;
-   margin-bottom:30px;
+   font-size: 30px;
+   margin-bottom: 10px;
  }
 
  a {
   text-decoration: none;
-}
-
-.listing_button a {
   color: white;
 }
 
  body {
-   background-color: grey;
+   background-color: lightgray;
  }
+
+ h2 {
+  font-size: 20px;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+}
 
  .content{
    margin:5% 10% 0% 10%;
@@ -94,9 +97,12 @@
   width: 110px;
   text-align: center;
   float: right;
- }
-
+}
+ input[type="date"],
+ input[type="url"],
  input[type="text"],
+ input[type="email"],
+ input[type="password"],
  input[type="number"] {
   height: 38px;
   overflow: visible;
@@ -105,9 +111,8 @@
   margin-bottom: 13px;
   width: 100%;
   font-size: 17px;
-  }
-
-  textarea {
+}
+textarea {
     overflow: visible;
     border: 1px solid #cacaca;
     padding: 7px;
@@ -115,4 +120,4 @@
     width: 100%;
     font-size: 17px;
 
-  }
+}
