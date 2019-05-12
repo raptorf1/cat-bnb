@@ -3,14 +3,21 @@ Feature: Owner can view offers on Listing page
   In order to choose host for my cat
   I need to be able to view the offers for my listing
 
-  Background: Offers exists on a listing
+  Background: Offers exist on a listing
+    Given the following user exist
+      | email              | password |
+      | george@saloniki.gr | password |
+    
     Given the following listings exist
     | pet_name  | pet_location    | pet_description   | start_date      | end_date      | pet_picture |
     | Leif      | Gothenburg      | I'm nice          | 2019-06-28      | 2019-06-29    | picture1    |
     | Ace       | Stockholm       | I'm nice          | 2019-06-28      | 2019-06-29    | picture2    |
+    
     And the following offers exists on a listing
     | name   | email           | location      | price  | listing |    
     | Felix  | felix@craft.se  | Gothenburg    | 100    | Leif    |
+    
+    And I am logged in as "george@saloniki.gr"
     And I visit the landing page
   
   Scenario: Owner can click on listing and see correct offers in that listing
