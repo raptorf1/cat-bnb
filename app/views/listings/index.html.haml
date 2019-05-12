@@ -1,5 +1,6 @@
 .listing_container
-  %h1.catbnb Listings
+  %h1.catbnb Welcome!
+  %h2 Here are some supernice cats you can host!
   - @listings.each do |listing|
     .listing_item{id: dom_id(listing)}
       .listing_image{ :style => "background: url('#{listing.pet_picture}') no-repeat center top; background-size:cover;" }

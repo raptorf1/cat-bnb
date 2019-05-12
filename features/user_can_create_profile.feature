@@ -1,4 +1,3 @@
-@javascript
 Feature: User can create a Host Profile
   As a registered user
   In order to be able to apply for becoming a cat host
