@@ -18,14 +18,12 @@ class ListingsController < ApplicationController
     listing.user_id = current_user.id
     listing.save
     
-    #binding.pry
-
     if listing.persisted?
       redirect_to root_path
     else
       redirect_to new_listing_path, notice: "Please fill in all fields"
+    end
   end
-end
 
   private
     def listing_params

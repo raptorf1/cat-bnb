@@ -2,7 +2,9 @@ class OffersController < ApplicationController
 
   def create
     @listing = Listing.find(params[:listing_id])
-    @offer = @listing.offers.create(offer_params)
+    @offer = @listing.offers.new(offer_params)
+    @offer.listing_id = @listing.id
+    @offer.save
 
     if @offer.persisted?
       redirect_to root_path
@@ -11,17 +13,9 @@ class OffersController < ApplicationController
     end
   end
 
-  # def status_accept
-  #   @listing = Listing.find(params[:listing_id])
-  #   @offer = @listing.offers.find(params[:id])
-  #   @offer.update(status: "accepted")
-  # end
-
   def update
-    #@listing = Listing.find(params[:listing_id])
     @offer = Offer.find(params[:id])
     @offer.update(status: "accepted")
-    
   end
 
 
