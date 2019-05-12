@@ -19,26 +19,7 @@
 
 - if current_user.profile.nil? == false
   %h2 Create your offer
-  = form_with(model: [ @listing, @listing.offers.build ], local: true) do |form| 
-    %p
-      = form.label :name
-      %br/
-      = form.text_field :name
-    %p
-      = form.label :email
-      %br/
-      = form.text_field :email
-    %p
-      = form.label :location
-      %br/
-      = form.text_area :location
-    %p
-      = form.label :price
-      %br/
-      = form.number_field :price
-    %p
-      = form.submit "Create offer"     
+  = render "./listings/partials/form_offer.html.haml"
 
 - else
   .message You must Become a Host before you can place offers on a cat
-  
