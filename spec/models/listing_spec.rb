@@ -33,4 +33,10 @@ RSpec.describe Listing, type: :model do
       expect(FactoryBot.create(:listing)).to be_valid
     end
   end
+
+  describe 'Associations' do
+    it { is_expected.to belong_to(:user) }
+    it { is_expected.to have_many(:offers) }
+  end
+
 end

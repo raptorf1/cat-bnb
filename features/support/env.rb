@@ -15,7 +15,7 @@ Webdrivers::Chromedriver.version = '2.42'
 
 chrome_options = %w[no-sandbox disable-popup-blocking disable-infobars auto-open-devtools-for-tabs]
 
-chrome_options << 'headless'
+#chrome_options << 'headless'
 
 Capybara.register_driver :selenium do |app|
     options = Selenium::WebDriver::Chrome::Options.new(

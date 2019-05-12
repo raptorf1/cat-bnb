@@ -4,10 +4,10 @@ Feature: Visitor can view listing
   I want to be able to view listings on the landing page
 
   Background:
-    Given the following listings exist
-    | pet_name  | pet_location    | pet_description   | start_date      | end_date      | pet_picture |
-    | Zane      | Gothenburg      | I'm nice          | 2019-06-28      | 2019-06-29    | picture1    |
-    | Carla     | Stockholm       | I love cats!      | 2019-05-28      | 2019-06-01    | picture2    |
+    Given the following listings exist for a user
+      | pet_name | pet_location | pet_description | start_date | end_date   | pet_picture | user           |
+      | Zane     | Gothenburg   | I'm nice        | 2019-06-28 | 2019-06-29 | picture1    | zane@craft.se  |
+      | Carla    | Stockholm    | I love cats!    | 2019-05-28 | 2019-06-01 | picture2    | carla@craft.se |
 
   Scenario:
     When I visit the landing page

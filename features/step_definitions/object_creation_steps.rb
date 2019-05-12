@@ -19,6 +19,15 @@ Given("the following profile exist for a user") do |table|
   end
 end
 
+Given("the following listings exist for a user") do |table|
+  table.hashes.each do |listing|
+    user = User.find_or_create_by(email: listing[:user])
+    FactoryBot.create(:listing, listing
+      .except('user')
+      .merge(user: user))
+  end  
+end
+
 Given("the following offers exists on a listing") do |table|
   table.hashes.each do |offer|
     listing_offer = Listing.find_or_create_by(pet_name: offer[:listing])

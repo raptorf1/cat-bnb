@@ -4,6 +4,7 @@ FactoryBot.define do
     email { "MyString" }
     location { "MyString" }
     price { 1 }
-    listing
+    status { nil }
+    association :listing
   end
 end

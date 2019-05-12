@@ -5,27 +5,26 @@ class ListingsController < ApplicationController
     @listings = Listing.all
   end
 
-  def show
-    @listing = Listing.find(params[:id])
-  end  
-
   def new
     @listing = Listing.new
   end
 
   def show
     @listing = Listing.find(params[:id])
-  end 
+  end
 
   def create
-    listing = Listing.create(listing_params)
-
+    listing = Listing.new(listing_params)
+    listing.user_id = current_user.id
+    listing.save
+    
     if listing.persisted?
       redirect_to root_path
     else
       redirect_to new_listing_path, notice: "Please fill in all fields"
+    end
   end
-end
+
 
   private
     def listing_params
