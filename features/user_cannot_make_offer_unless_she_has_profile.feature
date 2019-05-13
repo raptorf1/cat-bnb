@@ -23,5 +23,6 @@ Feature: Registered user cannot make an offer unless she has a profile
     And I should not see "Make an offer" within "Zane" section
     When I click on "Show listing" within "Zane" section
     Then I should see "You must Become a Host before you can place offers on a cat"
-    When I click on "Show listing" within "Carla" section
+    When I visit the landing page
+    And I click on "Show listing" within "Carla" section
     Then I should see "You must Become a Host before you can place offers on a cat"
